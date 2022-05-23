@@ -1,24 +1,24 @@
-//Button querySelectors variables:
+// Button querySelectors variables:
 var homeButton = document.querySelector('.home-button');
 var randomCoverButton = document.querySelector('.random-cover-button');
 var saveCoverButton = document.querySelector('.save-cover-button');
 var viewSavedButton = document.querySelector('.view-saved-button');
 var makeNewButton = document.querySelector('.make-new-button');
 var createNewBookButton = document.querySelector('.create-new-book-button');
-//
-//Cover querySelectors variables:
+
+// Cover querySelectors variables:
 var coverImage = document.querySelector('.cover-image');
 var coverTitle = document.querySelector('.cover-title');
 var coverTagline1 = document.querySelector('.tagline-1');
 var coverTagline2 = document.querySelector('.tagline-2');
-//
-// //View querySelectors variables:
+
+// View querySelectors variables:
 var savedView = document.querySelector('.saved-view');
 var formView = document.querySelector('.form-view');
 var homeView = document.querySelector('.home-view');
 var savedCoversSection = document.querySelector('.saved-covers-section');
 
-//Input querySelector variables:
+// Input querySelector variables:
 var userCover = document.querySelector('.user-cover');
 var userTitle = document.querySelector('.user-title');
 var userDesc1 = document.querySelector('.user-desc1');
@@ -28,10 +28,9 @@ var userDesc2 = document.querySelector('.user-desc2');
 var savedCovers = [
   new Cover("http://3.bp.blogspot.com/-iE4p9grvfpQ/VSfZT0vH2UI/AAAAAAAANq8/wwQZssi-V5g/s1600/Do%2BNot%2BForsake%2BMe%2B-%2BImage.jpg", "Sunsets and Sorrows", "sunsets", "sorrows")
 ];
-
 var currentCover;
 
-// Add your event listeners here 👇
+// Event listeners:
 window.addEventListener('load', displayRandomCover);
 
 randomCoverButton.addEventListener('click', displayRandomCover);
@@ -41,8 +40,13 @@ homeButton.addEventListener('click', displayHomePage);
 createNewBookButton.addEventListener('click', makeMyBookCover);
 saveCoverButton.addEventListener('click', saveCurrentCover);
 
-// Create your event handlers and other functions here 👇
+// Event handlers and other functions:
+
 //Helper Functions:
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
 function showElements(elements) {
   for (var i = 0; i < elements.length; i++) {
     elements[i].classList.remove('hidden');
@@ -55,6 +59,7 @@ function hideElements(elements) {
   }
 }
 
+// Display and Button Functions:
 function displayRandomCover() {
   currentCover = new Cover(covers[getRandomIndex(covers)], titles[getRandomIndex(titles)],
   descriptors[getRandomIndex(descriptors)], descriptors[getRandomIndex(descriptors)]);
@@ -113,9 +118,4 @@ function displaySavedCovers() {
       <img class="overlay" src="./assets/overlay.png">
     </section>`
   }
-}
-
-// We've provided one function to get you started
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
 }
