@@ -14,17 +14,14 @@ const homeView = document.querySelector('.home-view');
 const formView = document.querySelector('.form-view');
 const savedView = document.querySelector('.saved-view');
 const saveCoverView = document.querySelector('.saved-covers-section');
+const noSavedCovers = document.querySelector('.no-saved-message');
 
 const coverInput = document.querySelector('#cover');
 const titleInput = document.querySelector('#title');
 const descriptor1Input = document.querySelector('#descriptor1');
 const descriptor2Input = document.querySelector('#descriptor2');
 
-const savedCovers = [
-  new Cover(
-    "http://3.bp.blogspot.com/-iE4p9grvfpQ/VSfZT0vH2UI/AAAAAAAANq8/wwQZssi-V5g/s1600/Do%2BNot%2BForsake%2BMe%2B-%2BImage.jpg", "Sunsets and Sorrows", "sunsets", "sorrows")
-];
-
+const savedCovers = [];
 let currentCover;
 
 window.addEventListener('load', displayRandomCover);
@@ -117,6 +114,9 @@ function saveCover() {
   if (!savedCovers.includes(currentCover)) {
     savedCovers.push(currentCover);
   }
+  if (savedCovers.length) {
+    hideElements([noSavedCovers]);
+  }
 }
 
 function createNewBook() {
@@ -129,4 +129,7 @@ function createNewBook() {
 function deleteSavedCovers(div) {
   savedCovers.splice(div.id, 1);
   div.remove();
+  if (!savedCovers.length) {
+    showElements([noSavedCovers]);
+  }
 }
