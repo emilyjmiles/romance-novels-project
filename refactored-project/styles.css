@@ -15,8 +15,20 @@ body {
 }
 
 /* ~~~~~~~~~~~~~~ CONTROLS ~~~~~~~~~~~~~~~~ */
+header {
+  background: #422453;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.app-title {
+  color: white;
+  margin-left: 1%;
+  text-align: center;
+}
+
 .controls {
-  background: #7e5496;
   display: flex;
   justify-content: center;
   padding: 10px 0;
@@ -26,19 +38,20 @@ body {
   background: white;
   border: none;
   border-radius: 5px;
-  color: purple;
+  color: #422453;
   font-size: 16px;
   margin: 10px;
   padding: 10px 20px;
 }
 
 .controls > button:hover {
-  background: #e07999;
+  background: black;
   color: white;
 }
 
 /* ~~~~~~~~~~~~~~ HOME ~~~~~~~~~~~~~~~~ */
-.main-cover {
+.main-cover,
+.preview-cover {
   height: 80vh;
   margin: 4vh auto;
   position: relative;

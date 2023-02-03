@@ -7,13 +7,17 @@
     <title>RomCom</title>
   </head>
   <body>
-    <section class="controls">
-      <button class="home-button hidden">Home</button>
-      <button class="random-cover-button">Show New Random Cover</button>
-      <button class="save-cover-button">Save Cover</button>
-      <button class="view-saved-button">View Saved Covers</button>
-      <button class="make-new-button">Make Your Own Cover</button>
-    </section>
+    <header>
+      <h1 class="app-title">Romance Book Cover Generator</h1>
+      <section class="controls">
+        <button class="home-button hidden">Home</button>
+        <button class="random-cover-button">Show New Random Cover</button>
+        <button class="save-cover-button">Save Cover</button>
+        <button class="view-saved-button">View Saved Covers</button>
+        <button class="edit-cover-button hidden">Edit Cover</button>
+        <button class="make-new-button">Make Your Own Cover</button>
+      </section>
+    </header>
     <section class="view home-view">
       <section class="main-cover">
         <img class="cover-image" src="./assets/prairie.jpg">
@@ -40,6 +44,7 @@
         <button class="create-new-book-button">Make my book</button>
       </form>
     </section>
+    <section class="view preview-cover-view hidden"></section>
     <script src="./src/data.js"></script>
     <script src="./src/Cover.js"></script>
     <script src="./src/main.js"></script>
