@@ -108,6 +108,10 @@ body {
   justify-content: space-around;
 }
 
+.no-saved-message {
+  text-align: center;
+}
+
 .mini-cover {
   height: 40vh;
   margin: 1.3vh auto;
@@ -163,4 +167,15 @@ form > button {
 form > button:hover {
   background: #e07999;
   color: white;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message {
+  margin: 0;
+  padding: 0;
+  color: rgb(255, 0, 0)
 }

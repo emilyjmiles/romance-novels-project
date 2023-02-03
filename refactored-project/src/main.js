@@ -15,16 +15,22 @@ const formView = document.querySelector('.form-view');
 const savedView = document.querySelector('.saved-view');
 const saveCoverView = document.querySelector('.saved-covers-section');
 
-const coverInput = document.querySelector('#cover');
-const titleInput = document.querySelector('#title');
-const descriptor1Input = document.querySelector('#descriptor1');
-const descriptor2Input = document.querySelector('#descriptor2');
+const noSavedCovers = document.querySelector('.no-saved-message');
+const imageInputError = document.querySelector('.image-input-error');
+const titleInputError = document.querySelector('.title-input-error');
+const desc1InputError = document.querySelector('.desc1-input-error');
+const desc2InputError = document.querySelector('.desc2-input-error');
 
-const savedCovers = [
-  new Cover(
-    "http://3.bp.blogspot.com/-iE4p9grvfpQ/VSfZT0vH2UI/AAAAAAAANq8/wwQZssi-V5g/s1600/Do%2BNot%2BForsake%2BMe%2B-%2BImage.jpg", "Sunsets and Sorrows", "sunsets", "sorrows")
-];
+const imageInput = document.querySelector('.user-cover');
+const titleInput = document.querySelector('.user-title');
+const descriptor1Input = document.querySelector('.user-desc1');
+const descriptor2Input = document.querySelector('.user-desc2');
 
+const inputValues = [imageInput, titleInput, descriptor1Input, descriptor2Input];
+const errors = [imageInputError, titleInputError, desc1InputError, desc2InputError];
+const showFormErrors = [];
+const hideFormErrors = [];
+const savedCovers = [];
 let currentCover;
 
 window.addEventListener('load', displayRandomCover);
@@ -65,6 +71,8 @@ function showCurrentCover() {
 }
 
 function viewForm() {
+  inputValues.forEach(value => value = '');
+  errors.forEach(error => error.innerHTML = '');
   showElements([formView, homeButton]);
   hideElements([homeView, savedView, randomCoverButton, saveButton]);
 }
@@ -95,15 +103,14 @@ function showCoversSection() {
 }
 
 function makeMyBook(book) {
-  newBookButton.type = 'button';
-  book.cover = coverInput.value;
+  book.cover = imageInput.value;
   book.title = titleInput.value;
   book.tagline1 = descriptor1Input.value;
   book.tagline2 = descriptor2Input.value;
 }
 
 function saveInput() {
-  covers.push(coverInput.value);
+  covers.push(imageInput.value);
   titles.push(titleInput.value);
   descriptors.push(descriptor1Input.value);
   descriptors.push(descriptor2Input.value);
@@ -117,16 +124,51 @@ function saveCover() {
   if (!savedCovers.includes(currentCover)) {
     savedCovers.push(currentCover);
   }
+  if (savedCovers.length) {
+    hideElements([noSavedCovers]);
+  }
 }
 
-function createNewBook() {
-  saveInput();
-  makeMyBook(currentCover);
-  showCurrentCover();
-  displayHomePage();
+function validateForm() {
+  errors.forEach((error, index) => {
+    inputValues.forEach((input, i) => {
+      if (input.value !== '' && index === i && !hideFormErrors.includes(error)) {
+        error.innerHTML = '';
+        hideFormErrors.push(error);
+      }
+      if (input.value === '' && index === i && !showFormErrors.includes(error)) {
+        error.innerHTML = 'Please enter a valid input before submitting';
+        showFormErrors.push(error);
+      }
+    });
+  });
+
+  showFormErrors.forEach((error, index) => {
+    hideFormErrors.forEach(element => {
+      if (error === element) {
+        error.innerHTML = '';
+        showFormErrors.splice(index, 1);
+      }
+    });
+  });
+}
+
+function createNewBook(event) {
+  event.preventDefault();
+  validateForm();
+
+  if (!showFormErrors.length) {
+    saveInput();
+    makeMyBook(currentCover);
+    showCurrentCover();
+    displayHomePage();
+  }
 }
 
 function deleteSavedCovers(div) {
   savedCovers.splice(div.id, 1);
   div.remove();
+  if (!savedCovers.length) {
+    showElements([noSavedCovers]);
+  }
 }
