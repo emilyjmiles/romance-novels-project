@@ -17,6 +17,15 @@
 ---
 
 ## About The Project
+<table align="center">
+   <td align="center">Desktop Accessibility Rating Using Lighthouse:
+
+      <img width="500" alt="Screenshot 2023-02-04 at 2 42 54 AM" src="https://user-images.githubusercontent.com/103063934/216760458-71ede1e4-023d-4b4b-889e-d23facc62ad0.png"></td>
+
+   <td align="center">Mobile Accessibility Rating Using Lighthouse:
+
+      <img width="500" alt="Screenshot 2023-02-04 at 2 44 01 AM" src="https://user-images.githubusercontent.com/103063934/216760471-159a08da-ab72-4d45-b920-0eea978c8ab4.png"></td>
+</table>
 
 [Click here to explore the refactored site!](https://rom-com-project.netlify.app/)
 
@@ -80,7 +89,6 @@ Future Iterations:
 ![Contributors][contributors-shield]
 
 <table align="center">
-    <tr>
         <td align="center"> Emily Miles: <a href="https://github.com/emilyjmiles">GitHub</a> | <a href="https://www.linkedin.com/in/emilyjmiles/">LinkedIn</a></td>
         <td align="center"> Jeffrey Cook: <a href="https://github.com/JCookDev">GitHub</a> | <a href="https://www.linkedin.com/in/j-cook-jr/">LinkedIn</a></td>
 </table>
