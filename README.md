@@ -1,6 +1,7 @@
 <a name="readme-top"></a>
 
-<p align="center"><img width="900" alt="Screenshot 2023-02-04 at 1 59 55 AM" src="https://user-images.githubusercontent.com/103063934/216758635-674f7dc3-757c-4b13-b666-d2cd09c96dbe.png"></p>
+<p align="center"><img width="900" alt="Screenshot 2023-02-04 at 11 31 31 AM" src="https://user-images.githubusercontent.com/103063934/216784061-fb5d71fd-e61c-4a5d-ae7a-9b6c0b6c1912.png"></p>
+
 
 ## Table of Contents
 
@@ -20,7 +21,8 @@
 
 | Refactored Project Desktop Accessibility Rating Using Lighthouse: | Refactored Project Mobile Accessibility Rating Using Lighthouse: |
 |-------------------------------------------------------------------|------------------------------------------------------------------|
-<img width="500" alt="Screenshot 2023-02-04 at 2 42 54 AM" src="https://user-images.githubusercontent.com/103063934/216760458-71ede1e4-023d-4b4b-889e-d23facc62ad0.png">|<img width="500" alt="Screenshot 2023-02-04 at 2 44 01 AM" src="https://user-images.githubusercontent.com/103063934/216760471-159a08da-ab72-4d45-b920-0eea978c8ab4.png">
+<img width="475" alt="Screenshot 2023-02-04 at 2 42 54 AM" src="https://user-images.githubusercontent.com/103063934/216784085-f188028e-e18d-4ec1-b9e9-0c10877c3af3.png">|<img width="475" alt="Screenshot 2023-02-04 at 2 44 01 AM" src="https://user-images.githubusercontent.com/103063934/216784097-7d11b945-74ee-4e6b-90f5-90de3ed0afb4.png">
+
 
 [Click here to explore the refactored site!](https://rom-com-project.netlify.app/)
 
