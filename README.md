@@ -18,6 +18,7 @@
 
 ## About The Project
 
+[Click here to explore the refactored site!](https://rom-com-project.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
