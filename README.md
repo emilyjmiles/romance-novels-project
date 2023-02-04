@@ -18,8 +18,8 @@
 
 ## About The Project
 
-| Desktop Accessibility Rating Using Lighthouse: | Mobile Accessibility Rating Using Lighthouse: |
-|------------------------------------------------|-----------------------------------------------|
+| Refactored Project Desktop Accessibility Rating Using Lighthouse: | Refactored Project Mobile Accessibility Rating Using Lighthouse: |
+|-------------------------------------------------------------------|------------------------------------------------------------------|
 <img width="500" alt="Screenshot 2023-02-04 at 2 42 54 AM" src="https://user-images.githubusercontent.com/103063934/216760458-71ede1e4-023d-4b4b-889e-d23facc62ad0.png">|<img width="500" alt="Screenshot 2023-02-04 at 2 44 01 AM" src="https://user-images.githubusercontent.com/103063934/216760471-159a08da-ab72-4d45-b920-0eea978c8ab4.png">
 
 [Click here to explore the refactored site!](https://rom-com-project.netlify.app/)
@@ -65,15 +65,21 @@ Original Project Run Through:
 
 https://user-images.githubusercontent.com/103063934/216758220-62f0852f-45f4-4569-bb31-c75bc1dc4eb1.mp4
 
+Future Iterations:
+
+- [ ] Implement functionality for form validation.
+- [ ] Add a message on the saved covers view for when a user has no covers saved covers.
+- [ ] Refactor all styling to improve the UI/UX.
+- [ ] Make fully responsive.
+- [ ] Refactor html for accessibility.
+
 Refactored Project Run Through:
 
 https://user-images.githubusercontent.com/103063934/216759355-ea3a9462-e25e-42b2-9278-3a332da14261.mp4
 
+Future Refactoring Iterations:
 
-
-Future Iterations:
-
-- [ ] Implement Mocha and Chai for testing
+- [ ] Implement Mocha and Chai for testing.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
