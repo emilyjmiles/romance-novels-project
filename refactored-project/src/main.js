@@ -136,7 +136,7 @@ function makeMyBook() {
   showCurrentCover(myCover);
   coverPreviewView.innerHTML =
     `<section class="cover preview-cover">
-      <img class="price-tag" src="./assets/price-tag.webp">
+      <img class="price-tag" src="./assets/price-tag.webp" alt="price tag">
       <img class="my-cover cover-image" src="${myCover.cover}" alt="${myCover.title}" width="500px" height="750px">
       <div class="cover-text">
         <h2 class="cover-title">${myCover.title}</h2>
@@ -183,7 +183,7 @@ function showSavedCoversSection() {
   savedCovers.forEach(cover => {
     saveCoverView.innerHTML +=
       `<section class="mini-cover" id="${cover}" ondblclick="deleteSavedCovers(this)">
-        <img class="price-tag" src="./assets/price-tag.webp">
+        <img class="price-tag" src="./assets/price-tag.webp" alt="price tag">
         <img class="mini-image" src="${cover.cover}" alt="${cover.title}">
         <div class="mini-text">
           <h2 class="mini-title" >${cover.title}</h2>
