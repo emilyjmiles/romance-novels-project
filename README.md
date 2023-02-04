@@ -65,7 +65,7 @@ You can find the project [here](https://github.com/emilyjmiles/romcom-project) a
 
 Original Project Run Through:
 
-https://user-images.githubusercontent.com/103063934/216758220-62f0852f-45f4-4569-bb31-c75bc1dc4eb1.mp4
+https://user-images.githubusercontent.com/103063934/216788935-f56817bc-c277-44dd-ba42-0ce86810ab36.mp4
 
 Future Iterations:
 
@@ -77,7 +77,7 @@ Future Iterations:
 
 Refactored Project Run Through:
 
-https://user-images.githubusercontent.com/103063934/216759355-ea3a9462-e25e-42b2-9278-3a332da14261.mp4
+https://user-images.githubusercontent.com/103063934/216788949-3ad7dd63-0a51-4797-abd5-c73aeb044f68.mp4
 
 Future Refactoring Iterations:
 
