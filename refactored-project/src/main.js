@@ -4,12 +4,13 @@ const tagline1 = document.querySelector('.tagline-1');
 const tagline2 = document.querySelector('.tagline-2');
 
 const randomCoverButton = document.querySelector('.random-cover-button');
-const saveButton = document.querySelector('.save-cover-button');
+const saveRandomButton = document.querySelector('.save-random-button');
+const saveMyButton = document.querySelector('.save-my-button');
 const viewSavedButton = document.querySelector('.view-saved-button');
 const makeCoverButton = document.querySelector('.make-new-button');
-const homeButton = document.querySelector('.home-button');
 const editCoverButton = document.querySelector('.edit-cover-button');
 const submitNewBookButton = document.querySelector('.create-new-book-button');
+const homeButton = document.querySelector('.home-button');
 
 const homeView = document.querySelector('.home-view');
 const formView = document.querySelector('.form-view');
@@ -33,17 +34,18 @@ const errors = [imageInputError, titleInputError, desc1InputError, desc2InputErr
 const showFormErrors = [];
 const hideFormErrors = [];
 const savedCovers = [];
-let currentCover;
+let randomCover;
 let myCover;
 
-window.addEventListener('load', displayRandomCover);
-
+window.addEventListener('load', displayHomePage);
 randomCoverButton.addEventListener('click', displayRandomCover);
 makeCoverButton.addEventListener('click', displayCoverForm);
 viewSavedButton.addEventListener('click', displaySavedCovers);
 homeButton.addEventListener('click', displayHomePage);
 submitNewBookButton.addEventListener('click', createNewBook);
-saveButton.addEventListener('click', saveCover);
+editCoverButton.addEventListener('click', displayCoverForm);
+saveRandomButton.addEventListener('click', saveRandomCover);
+saveMyButton.addEventListener('click', saveMyCover);
 
 function hideElements(elements) {
   elements.forEach(element => element.classList.add('hidden'));
@@ -58,8 +60,25 @@ function getRandomIndex(array) {
 }
 
 function displayHomePage() {
-  showElements([homeView, randomCoverButton, saveButton, viewSavedButton, makeCoverButton]);
-  hideElements([savedView, formView, coverPreviewView, homeButton, editCoverButton]);
+  showElements([homeView, randomCoverButton, saveRandomButton, viewSavedButton, makeCoverButton]);
+  hideElements([savedView, formView, coverPreviewView, homeButton, saveMyButton, editCoverButton, noSavedCovers]);
+  displayRandomCover();
+}
+
+function displaySavedCovers() {
+  showElements([savedView, homeButton, viewSavedButton, makeCoverButton]);
+  hideElements([formView, coverPreviewView, homeView, randomCoverButton, saveRandomButton, saveMyButton, editCoverButton]);
+  showSavedCoversSection();
+}
+
+function displayCoverForm() {
+  showElements([formView, homeButton, viewSavedButton, makeCoverButton]);
+  hideElements([coverPreviewView, homeView, savedView, randomCoverButton, saveRandomButton, saveMyButton, editCoverButton]);
+}
+
+function displayCoverPreview() {
+  showElements([coverPreviewView, editCoverButton, saveMyButton, viewSavedButton, makeCoverButton]);
+  hideElements([homeView, savedView, formView, randomCoverButton, homeButton, saveRandomButton, noSavedCovers]);
 }
 
 function displayRandomCover() {
@@ -67,92 +86,15 @@ function displayRandomCover() {
   const title = titles[getRandomIndex(titles)];
   const tagline1 = descriptors[getRandomIndex(descriptors)];
   const tagline2 = descriptors[getRandomIndex(descriptors)];
-  currentCover = new Cover(coverImage, title, tagline1, tagline2);
-  showCurrentCover();
+  randomCover = new Cover(coverImage, title, tagline1, tagline2);
+  showCurrentCover(randomCover);
 }
 
-function showSavedCoversSection() {
-  saveCoverView.innerHTML = '';
-  savedCovers.forEach(cover => {
-    saveCoverView.innerHTML +=
-      `<div class="mini-cover" id="${cover}" ondblclick="deleteSavedCovers(this)">
-    <img class="mini-cover" src="${cover.cover}">
-    <h2 class="cover-title" >${cover.title}</h2>
-    <h3 class="tagline">A tale of <span class="tagline-1">${cover.tagline1}</span> and <span class="tagline-2">${cover.tagline2}</span></h3>
-    <img class="price-tag" src="./assets/price.png">
-    <img class="overlay" src="./assets/overlay.png">
-    </div>`;
-  });
-}
-
-function displaySavedCovers() {
-  showElements([savedView, homeButton, viewSavedButton, makeCoverButton]);
-  hideElements([formView, coverPreviewView, homeView, randomCoverButton, saveButton, editCoverButton]);
-  showSavedCoversSection();
-}
-
-function displayCoverForm() {
-  showElements([formView, homeButton, viewSavedButton, makeCoverButton]);
-  hideElements([coverPreviewView, homeView, savedView, randomCoverButton, saveButton, editCoverButton]);
-}
-
-function displayCoverPreview() {
-  showElements([coverPreviewView, editCoverButton, saveButton, viewSavedButton, makeCoverButton]);
-  hideElements([homeView, savedView, formView, randomCoverButton, homeButton]);
-}
-
-function showCurrentCover() {
-  coverImage.src = currentCover.cover;
-  title.innerText = currentCover.title;
-  tagline1.innerText = currentCover.tagline1;
-  tagline2.innerText = currentCover.tagline2;
-}
-
-function saveInputs() {
-  covers.push(imageInput.value);
-  titles.push(titleInput.value);
-  descriptors.push(descriptor1Input.value);
-  descriptors.push(descriptor2Input.value);
-  inputValues.forEach(value => value = '');
-  errors.forEach(error => error.innerHTML = '');
-}
-
-function saveCover() {
-  currentCover.cover = coverImage.src;
-  currentCover.title = title.innerText;
-  currentCover.tagline1 = tagline1.innerText;
-  currentCover.tagline2 = tagline2.innerText;
-
-  if (savedCovers.includes(myCover)) {
-    savedCovers.push(myCover);
-  }
-  if (!myCover && !savedCovers.includes(currentCover)) {
-    savedCovers.push(currentCover);
-  }
-  if (savedCovers.length) {
-    hideElements([noSavedCovers]);
-  }
-}
-
-function deleteSavedCovers(div) {
-  savedCovers.splice(div.id, 1);
-  div.remove();
-  if (!savedCovers.length) {
-    showElements([noSavedCovers]);
-  }
-}
-
-function makeMyBook() {
-  coverPreviewView.innerHTML =
-    `<section class="preview-cover-view">
-      <section class="preview-cover">
-        <img class="cover-image" src="${imageInput.value}">
-        <h2 class="cover-title">${titleInput.value}</h2>
-        <h3 class="tagline">A tale of <span class="tagline-1">${descriptor1Input.value}</span> and <span class="tagline-2">${descriptor2Input.value}</span></h3>
-        <img class="price-tag" src="./assets/price.png">
-        <img class="overlay" src="./assets/overlay.png">
-      </section>
-    </section>`;
+function showCurrentCover(cover) {
+  coverImage.src = cover.cover;
+  title.innerText = cover.title;
+  tagline1.innerText = cover.tagline1;
+  tagline2.innerText = cover.tagline2;
 }
 
 function validateForm() {
@@ -181,12 +123,80 @@ function validateForm() {
 
 function createNewBook(event) {
   event.preventDefault();
-  myCover = new Cover(imageInput.value, titleInput.value, descriptor1Input.value, descriptor2Input.value);
   validateForm();
 
   if (!showFormErrors.length) {
-    saveInputs();
     makeMyBook();
     displayCoverPreview();
+  }
+}
+
+function makeMyBook() {
+  myCover = new Cover(imageInput.value, titleInput.value, descriptor1Input.value, descriptor2Input.value);
+  showCurrentCover(myCover);
+  coverPreviewView.innerHTML =
+    `<section class="cover preview-cover">
+      <img class="price-tag" src="./assets/price-tag.webp">
+      <img class="my-cover cover-image" src="${myCover.cover}" width="500px" height="750px">
+      <div class="cover-text">
+        <h2 class="cover-title">${myCover.title}</h2>
+        <h3 class="tag-desc tagline">A tale of <span class="tag-desc tagline-1">${myCover.tagline1}</span> and <span class="tag-desc tagline-2">${myCover.tagline2}</span></h3>
+      </div>
+    </section>`;
+}
+
+function saveInputs() {
+  covers.push(imageInput.value);
+  titles.push(titleInput.value);
+  descriptors.push(descriptor1Input.value);
+  descriptors.push(descriptor2Input.value);
+}
+
+function clearFormInputs() {
+  inputValues.forEach(input => input.value = '');
+  errors.forEach(error => error.innerHTML = '');
+}
+
+function saveRandomCover() {
+  saveInputs();
+  if (!savedCovers.includes(randomCover)) {
+    savedCovers.push(randomCover);
+  }
+  if (savedCovers.length) {
+    hideElements([noSavedCovers]);
+  }
+}
+
+function saveMyCover() {
+  saveInputs();
+  clearFormInputs();
+  if (!savedCovers.includes(myCover)) {
+    savedCovers.push(myCover);
+  }
+  if (savedCovers.length) {
+    hideElements([noSavedCovers]);
+  }
+}
+
+function showSavedCoversSection() {
+  saveCoverView.innerHTML = '';
+  savedCovers.forEach(cover => {
+    saveCoverView.innerHTML +=
+      `<section class="mini-cover" id="${cover}" ondblclick="deleteSavedCovers(this)">
+        <img class="price-tag" src="./assets/price-tag.webp">
+        <img class="mini-image" src="${cover.cover}">
+        <div class="mini-text">
+          <h2 class="mini-title" >${cover.title}</h2>
+          <h3 class="mini-desc tagline">A tale of <span class="mini-desc tagline-1">${cover.tagline1}</span> and <span class="mini-desc tagline-2">${cover.tagline2}</span></h3>
+        <div>
+      </section>`;
+  });
+}
+
+function deleteSavedCovers(div) {
+  savedCovers.splice(div.id, 1);
+  div.remove();
+  if (!savedCovers.length) {
+    showElements([noSavedCovers]);
   }
 }
