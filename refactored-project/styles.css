@@ -1,142 +1,55 @@
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
-  font-family: 'Playfair Display', serif;
+  font-family: 'IM Fell English', serif;
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   margin: 0;
+  width: 100%;
   background: ghostwhite;
 }
 
-.hidden {
-  display: none;
-}
-
-/* ~~~~~~~~~~~~~~ CONTROLS ~~~~~~~~~~~~~~~~ */
-.controls {
-  background: #7e5496;
+header {
   display: flex;
-  justify-content: center;
-  padding: 10px 0;
+  justify-content: space-between;
+  flex-direction: column;
+  background: #909090;
+  box-shadow: 0 2.5px 5px #000000;
+  width: 100%;  
 }
 
-.controls > button {
+button {
   background: white;
-  border: none;
+  color: #000000;
+  border: 1px solid #000000;
   border-radius: 5px;
-  color: purple;
-  font-size: 16px;
-  margin: 10px;
-  padding: 10px 20px;
+  box-shadow: 0 2.5px 5px #000000;
+  font-size: 2.5vh;
+  white-space: nowrap;
+  margin: 0.5%;
+  padding: 0.5%;
 }
 
-.controls > button:hover {
-  background: #e07999;
-  color: white;
-}
-
-/* ~~~~~~~~~~~~~~ HOME ~~~~~~~~~~~~~~~~ */
-.main-cover {
-  height: 80vh;
-  margin: 4vh auto;
-  position: relative;
-  width: 26vw;
-}
-
-.cover-image,
-.overlay {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-
-.cover-title,
-.tagline {
-  text-align: center;
-  color: #f4ebcd;
-  position: absolute;
-  width: 100%;
-}
-
-.cover-title {
-  bottom: .9em;
-  font-family: 'Playball', cursive;
-  font-size: 4.5em;
-  font-weight: normal;
-  line-height: 90%;
-  margin: 0;
-  padding: 0.1em;
-}
-
-.cover-title::first-letter {
-  font-size: 100px;
-}
-
-.tagline {
-  background: rgba(126, 84, 150, .5);
-  color: #fcf4dc;
-  padding: 5px;
-  bottom: 5px;
-}
-
-.price-tag {
-  position: absolute;
-  top: 10px;
-  width: 22%;
-  right: 15px;
-  transform: rotate(10deg);
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  filter: opacity(65%);
-  mix-blend-mode: screen;
-}
-
-/* ~~~~~~~~~~~~~ SAVED COVERS ~~~~~~~~~~~~~~~ */
-.saved-view {
-  padding: 30px;
-}
-
-.saved-covers-section {
+button:hover {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  transform: scale(1.1);
+  transition: 0.75s;
+  background: black;
+  color: white;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0 2.5px 5px #FFFFFF;
 }
 
-.no-saved-message {
-  text-align: center;
+button:active{
+  transform: scale(1.0);
+  transition: 0.1s;
 }
 
-.mini-cover {
-  height: 40vh;
-  margin: 1.3vh auto;
-  position: relative;
-  width: 14vw;
-}
-
-.mini-cover > .cover-title {
-  bottom: 45px;
-  font-size: 40px;
-}
-
-.mini-cover > .cover-title::first-letter {
-  font-size: 60px;
-}
-
-.mini-cover > .tagline {
-  background: RGBA(126, 84, 150, .5);
-  bottom: 5px;
-  color: #fcf4dc;
-  font-size: 10px;
-  padding: 5px;
-}
-
-/* ~~~~~~~~~~~~~ NEW COVER FORM ~~~~~~~~~~~~~~~ */
 form {
   display: flex;
   flex-direction: column;
@@ -144,29 +57,10 @@ form {
   margin: 30px;
 }
 
-form > label,
-form > input {
+label,
+input {
   width: 50%;
-}
-
-form > input {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-form > button {
-  background: purple;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 16px;
-  margin: 10px;
-  padding: 10px 20px;
-}
-
-form > button:hover {
-  background: #e07999;
-  color: white;
+  font-size: 2.5vh;
 }
 
 label {
@@ -174,8 +68,146 @@ label {
   justify-content: space-between;
 }
 
+input {
+  margin-bottom: 1%;
+}
+
+.app-title {
+  font-size: 5vh;
+  color: #000000;
+  text-align: center;
+  font-weight: bold;
+  margin: 0.25%;
+  padding:0.25%;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.5%;
+}
+
+.cover {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  object-fit: contain;
+  height: 75vh;
+  max-width: fit-content;
+  margin: 2.5% auto;
+  position: relative;
+}
+
+.price-tag {
+  position: absolute;
+  top: 1%;
+  width: 20%;
+  right: 2%;
+  transform: rotate(15deg);
+}
+
+.cover-image,
+.mini-image {
+  border: 1px solid #000000;
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.cover-text,
+.mini-text {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  margin-bottom: 2%;
+  width: 100%;
+}
+
+.cover-title,
+.tag-desc {
+  font-family: 'Playball', cursive;
+  position: relative;
+  text-overflow: wrap;
+  text-align: center;
+  color: #FFFFFF;
+  width: 98%;
+  margin: 0.25%;
+  padding: 0.25%;
+}
+
+.cover-title {
+  font-size: 5vh;
+  font-weight: normal;
+  text-shadow: #000000;
+}
+
+.tag-desc {
+  color: #FFFFFF;
+  font-size: 3vh;
+  white-space: nowrap;
+}
+
+.saved-view {
+  padding: 1%;
+}
+
+.saved-covers-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 75vh;
+  position: relative;
+}
+
+.no-saved-message {
+  text-align: center;
+  font-size: 3vh;
+}
+
+.mini-cover {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  object-fit: contain;
+  height: 35vh;
+  max-width: fit-content;
+  margin: 2.5% auto;
+  position: relative;
+}
+
+.mini-title,
+.mini-desc {
+  font-family: 'Playball', cursive;
+  text-align: center;
+  color: #FFFFFF;
+  width: 98%;
+  margin: 0.25%;
+  padding: 0.25%;
+}
+
+.mini-title {
+  font-size: 2.75vh;
+}
+
+.mini-desc {
+  font-size: 1.5vh;
+  white-space: nowrap;
+}
+
+.my-cover,
+.mini-image {
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  object-fit: cover;
+}
+
 .message {
   margin: 0;
   padding: 0;
-  color: rgb(255, 0, 0)
+  color: #ff0000
+}
+
+.hidden {
+  display: none;
 }

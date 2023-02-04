@@ -5,32 +5,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Playball&family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <title>RomCom</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+    </style>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
+    </style>
   </head>
   <body>
-    <section class="controls">
-      <button class="home-button hidden">Home</button>
-      <button class="random-cover-button">Show New Random Cover</button>
-      <button class="save-cover-button">Save Cover</button>
-      <button class="view-saved-button">View Saved Covers</button>
-      <button class="make-new-button">Make Your Own Cover</button>
-    </section>
+    <header>
+      <h1 class="app-title">Romance Book Cover Generator</h1>
+      <section class="controls">
+        <button class="home-button hidden">Home</button>
+        <button class="random-cover-button">Generate Random Cover</button>
+        <button class="save-random-button">Save Random Cover</button>
+        <button class="save-my-button">Save My Cover</button>
+        <button class="view-saved-button">View Saved Covers</button>
+        <button class="edit-cover-button hidden">Edit My Cover</button>
+        <button class="make-new-button">Create My Cover</button>
+      </section>
+    </header>
     <section class="view home-view">
-      <section class="main-cover">
-        <img class="cover-image" src="./assets/prairie.jpg">
-        <h2 class="cover-title">Windswept Hearts</h2>
-        <h3 class="tagline">A tale of <span class="tagline-1">passion</span> and <span class="tagline-2">woe</span></h3>
-        <img class="price-tag" src="./assets/price.png">
-        <img class="overlay" src="./assets/overlay.png">
+      <section class="cover main-cover">
+        <img class="price-tag" src="./assets/price-tag.webp">
+        <img class="cover-image" src="./assets/book-cover-1.webp" width="500px" height="750px">
+        <div class="cover-text">
+          <h2 class="cover-title">Windswept Hearts</h2>
+          <h3 class="tag-desc tagline">A tale of <span class="tag-desc tagline-1">passion</span> and <span class="tag-desc tagline-2">woe</span></h3>
+        </div>
       </section>
     </section>
-    <section class="view saved-view hidden">
-      <section class="saved-covers-section"></section>
+    <section class="view saved-view">
       <h3 class="no-saved-message">You haven't saved any covers yet!</h3>
+      <section class="saved-covers-section"></section>
     </section>
     <section class="view form-view hidden">
       <form>
         <label for="cover">Image <p class="message image-input-error"></p></label>
-        <input class="user-cover" type="text" placeholder="cover image url" id="cover" />
+        <input class="user-cover" type="url" placeholder="cover image url" id="cover" />
         <label for="title">Title <p class="message title-input-error"></p></label>
         <input class="user-title" type="text" placeholder="cover title"id="title" />
         <label for="descriptor1">First descriptor <p class="message desc1-input-error"></p></label>
@@ -39,6 +51,9 @@
         <input class="user-desc2" type="text" placeholder="cover second descriptor" id="descriptor2" />
         <button class="create-new-book-button">Make my book</button>
       </form>
+    </section>
+    <section class="view preview-cover-view hidden">
+      <section class="cover preview-cover"></section>
     </section>
     <script src="./src/data.js"></script>
     <script src="./src/Cover.js"></script>
