@@ -1,6 +1,7 @@
 <a name="readme-top"></a>
 
-<p align="center"><img width="900" alt="Screenshot 2023-02-04 at 1 59 55 AM" src="https://user-images.githubusercontent.com/103063934/216758635-674f7dc3-757c-4b13-b666-d2cd09c96dbe.png"></p>
+<p align="center"><img width="900" alt="Screenshot 2023-02-04 at 11 31 31 AM" src="https://user-images.githubusercontent.com/103063934/216784061-fb5d71fd-e61c-4a5d-ae7a-9b6c0b6c1912.png"></p>
+
 
 ## Table of Contents
 
@@ -17,6 +18,11 @@
 ---
 
 ## About The Project
+
+| Refactored Project Desktop Accessibility Rating Using Lighthouse: | Refactored Project Mobile Accessibility Rating Using Lighthouse: |
+|-------------------------------------------------------------------|------------------------------------------------------------------|
+<img width="475" alt="Screenshot 2023-02-04 at 2 42 54 AM" src="https://user-images.githubusercontent.com/103063934/216784085-f188028e-e18d-4ec1-b9e9-0c10877c3af3.png">|<img width="475" alt="Screenshot 2023-02-04 at 2 44 01 AM" src="https://user-images.githubusercontent.com/103063934/216784097-7d11b945-74ee-4e6b-90f5-90de3ed0afb4.png">
+
 
 [Click here to explore the refactored site!](https://rom-com-project.netlify.app/)
 
@@ -61,15 +67,21 @@ Original Project Run Through:
 
 https://user-images.githubusercontent.com/103063934/216758220-62f0852f-45f4-4569-bb31-c75bc1dc4eb1.mp4
 
+Future Iterations:
+
+- [ ] Implement functionality for form validation.
+- [ ] Add a message on the saved covers view for when a user has no covers saved covers.
+- [ ] Refactor all styling to improve the UI/UX.
+- [ ] Make fully responsive.
+- [ ] Refactor html for accessibility.
+
 Refactored Project Run Through:
 
 https://user-images.githubusercontent.com/103063934/216759355-ea3a9462-e25e-42b2-9278-3a332da14261.mp4
 
+Future Refactoring Iterations:
 
-
-Future Iterations:
-
-- [ ] Implement Mocha and Chai for testing
+- [ ] Implement Mocha and Chai for testing.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -80,7 +92,6 @@ Future Iterations:
 ![Contributors][contributors-shield]
 
 <table align="center">
-    <tr>
         <td align="center"> Emily Miles: <a href="https://github.com/emilyjmiles">GitHub</a> | <a href="https://www.linkedin.com/in/emilyjmiles/">LinkedIn</a></td>
         <td align="center"> Jeffrey Cook: <a href="https://github.com/JCookDev">GitHub</a> | <a href="https://www.linkedin.com/in/j-cook-jr/">LinkedIn</a></td>
 </table>
