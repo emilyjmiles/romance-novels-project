@@ -63,6 +63,10 @@ https://user-images.githubusercontent.com/103063934/216758220-62f0852f-45f4-4569
 
 Refactored Project Run Through:
 
+https://user-images.githubusercontent.com/103063934/216759355-ea3a9462-e25e-42b2-9278-3a332da14261.mp4
+
+
+
 Future Iterations:
 
 - [ ] Implement Mocha and Chai for testing
