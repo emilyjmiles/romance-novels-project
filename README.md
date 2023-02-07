@@ -6,36 +6,47 @@
 ## Table of Contents
 
 - [About The Project](#about-the-project)
-- [Project Spec](#project-spec)
 - [Technologies](#technologies)
+- [Accessibility Score](#accessibility-score)
 - [Getting Started](#getting-started)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Contact](#contact)
-- [Acknowledgments](#acknowledgments)
 - [Reflections](#reflections)
+- [Acknowledgments](#acknowledgments)
 
 ---
 
+<!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
-| Refactored Project Desktop Accessibility Rating Using Lighthouse: | Refactored Project Mobile Accessibility Rating Using Lighthouse: |
-|-------------------------------------------------------------------|------------------------------------------------------------------|
-<img width="475" alt="Screenshot 2023-02-04 at 2 42 54 AM" src="https://user-images.githubusercontent.com/103063934/216784085-f188028e-e18d-4ec1-b9e9-0c10877c3af3.png">|<img width="475" alt="Screenshot 2023-02-04 at 2 44 01 AM" src="https://user-images.githubusercontent.com/103063934/216784097-7d11b945-74ee-4e6b-90f5-90de3ed0afb4.png">
+Romance Book Cover Generator is an application that helps take the stress out of creating a book cover for your romance novel. It randomly generates a cover image, title, and tagline for you, with just a click of a button. Still having trouble deciding? You can also save covers to review later or use the "Create My Cover" form to customize your own cover. Once you decide on the cover for your next bestselling book, you can delete any other saved book covers by double clicking on the cover in your "View Saved Covers" section.
 
+The project specs can be found [here](https://frontend.turing.edu/projects/module-1/romcom-pair.html)
 
 [Click here to explore the refactored site!](https://rom-com-project.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Project Spec
-
-The project specs can be found [here](https://frontend.turing.io/projects/module-1/romcom-pair.html)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- TECHNOLOGIES -->
 
 ## Technologies
 
+<div>
+  <img alt="JavaScript" src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+  <img alt="CSS3" src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
+  <img alt="HTML5" src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/>
+</div>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACCESSIBILITY SCORE -->
+
+## Accessibility Score
+
+| Refactored Project Desktop Accessibility Rating Using Lighthouse: | Refactored Project Mobile Accessibility Rating Using Lighthouse: |
+|-------------------------------------------------------------------|------------------------------------------------------------------|
+<img width="475" alt="Screenshot 2023-02-04 at 2 42 54 AM" src="https://user-images.githubusercontent.com/103063934/216784085-f188028e-e18d-4ec1-b9e9-0c10877c3af3.png">|<img width="475" alt="Screenshot 2023-02-04 at 2 44 01 AM" src="https://user-images.githubusercontent.com/103063934/216784097-7d11b945-74ee-4e6b-90f5-90de3ed0afb4.png">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -65,19 +76,19 @@ You can find the project [here](https://github.com/emilyjmiles/romcom-project) a
 
 Original Project Run Through:
 
-https://user-images.githubusercontent.com/103063934/216758220-62f0852f-45f4-4569-bb31-c75bc1dc4eb1.mp4
+https://user-images.githubusercontent.com/103063934/216788935-f56817bc-c277-44dd-ba42-0ce86810ab36.mp4
 
 Future Iterations:
 
-- [ ] Implement functionality for form validation.
-- [ ] Add a message on the saved covers view for when a user has no covers saved covers.
-- [ ] Refactor all styling to improve the UI/UX.
-- [ ] Make fully responsive.
-- [ ] Refactor html for accessibility.
+- [x] Implement functionality for form validation.
+- [x] Add a message on the saved covers view for when a user has no covers saved covers.
+- [x] Refactor all styling to improve the UI/UX.
+- [x] Make fully responsive.
+- [x] Refactor html for accessibility.
 
 Refactored Project Run Through:
 
-https://user-images.githubusercontent.com/103063934/216759355-ea3a9462-e25e-42b2-9278-3a332da14261.mp4
+https://user-images.githubusercontent.com/103063934/216788949-3ad7dd63-0a51-4797-abd5-c73aeb044f68.mp4
 
 Future Refactoring Iterations:
 
@@ -98,24 +109,27 @@ Future Refactoring Iterations:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- REFLECTIONS -->
+
+## Reflections
+
+This was the first collaborative project we were given as students at Turing and learning to navigate that dynamic was difficult at times. Despite some scheduling hiccups, our team made sure to make communictation and understanding our top priorities. This project collaboration was a very rewarding experience and it was wonderful to be able to see and discuss our thought processes on how to accomplish the project goal.
+
+### Wins:
+- Being able to successfully complete every iteration of the project spec.
+- Understanding what each piece of code was doing and when it was doing it, that both teammates wrote.
+
+### Challenges:
+- Learning to collaborate on a team with someone who works and learns differently than myself.
+- Scheduling time to work together around our busy Turing curriculum and personal lives.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgments
 
-The following resources helped us build this project:
-
-[![MDN Docs][mdn-shield]][mdn]
-[![Turing School](https://img.shields.io/badge/Turing_School-030303?style=for-the-badge)](https://turing.edu/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Reflections
-
-### Wins:
-
-### Challenges:
-
-
+[![Turing School of Software and Design](https://img.shields.io/badge/Turing_School-030303?style=for-the-badge)](https://turing.edu/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
