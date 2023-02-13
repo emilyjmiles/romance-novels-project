@@ -105,11 +105,11 @@ Future Refactoring Iterations:
 
 <table align="center">
   <tr>
-    <td align="center"> Emily Miles </td>
     <td align="center"> Jeffrey Cook </td>
+    <td align="center"> Emily Miles </td>
   </tr>
-  <td align="center"> <a href="https://github.com/emilyjmiles">GitHub</a> | <a href="https://www.linkedin.com/in/emilyjmiles/">LinkedIn</a></td>
   <td align="center"> <a href="https://github.com/JCookDev">GitHub</a> | <a href="https://www.linkedin.com/in/j-cook-jr/">LinkedIn</a></td>
+  <td align="center"> <a href="https://github.com/emilyjmiles">GitHub</a> | <a href="https://www.linkedin.com/in/emilyjmiles/">LinkedIn</a></td>
 </table>
 
 ### Refactored Project Team
