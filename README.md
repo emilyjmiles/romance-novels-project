@@ -100,11 +100,26 @@ Future Refactoring Iterations:
 
 ## Contact
 
-![Contributors][contributors-shield]
+### Original Project Team
+![Original Project Contributors][original-contributors-shield]
 
 <table align="center">
-        <td align="center"> Emily Miles: <a href="https://github.com/emilyjmiles">GitHub</a> | <a href="https://www.linkedin.com/in/emilyjmiles/">LinkedIn</a></td>
-        <td align="center"> Jeffrey Cook: <a href="https://github.com/JCookDev">GitHub</a> | <a href="https://www.linkedin.com/in/j-cook-jr/">LinkedIn</a></td>
+  <tr>
+    <td align="center"> Emily Miles </td>
+    <td align="center"> Jeffrey Cook </td>
+  </tr>
+  <td align="center"> <a href="https://github.com/emilyjmiles">GitHub</a> | <a href="https://www.linkedin.com/in/emilyjmiles/">LinkedIn</a></td>
+  <td align="center"> <a href="https://github.com/JCookDev">GitHub</a> | <a href="https://www.linkedin.com/in/j-cook-jr/">LinkedIn</a></td>
+</table>
+
+### Refactored Project Team
+![Refactored Project Contributors][refactored-contributors-shield]
+
+<table align="center">
+  <tr>
+    <td align="center"> Emily Miles </td>
+  </tr>
+  <td align="center"> <a href="https://github.com/emilyjmiles">GitHub</a> | <a href="https://www.linkedin.com/in/emilyjmiles/">LinkedIn</a></td>
 </table>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -138,7 +153,8 @@ This was the first collaborative project we were given as students at Turing and
 
 [mdn-shield]: https://img.shields.io/badge/MDN_Web_Docs-black?style=for-the-badge&logo=mdnwebdocs&logoColor=white
 [mdn]: https://developer.mozilla.org/en-US/
-[contributors-shield]: https://img.shields.io/badge/Contributors-2-2ea44f?style=for-the-badge
+[original-contributors-shield]: https://img.shields.io/badge/Contributors-2-2ea44f?style=for-the-badge
+[refactored-contributors-shield]: https://img.shields.io/badge/Contributors-1-2ea44f?style=for-the-badge
 [miro]: https://miro.com/app/board/uXjVP-XsNqM=/
 [mvp]: https://docs.google.com/document/d/1Ptfo2c91jaLiTu2lmiIDEzmLHaEIdTzKzV8pYrR-Ky8/edit
 [GH project board]: https://github.com/orgs/IOTNBO-Capstone/projects/1
